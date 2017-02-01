@@ -70,39 +70,39 @@ FoveHeadset.GetHeadset()
 
 ## Structures
 ### SFVR_CompositorTexture
-__Fove.EFVR_ColorSpace__ colorSpace <br>
+[__Fove.EFVR_ColorSpace__](Fove.md/#efvr_colorspace) colorSpace <br>
 __System.intPtr__ pTexture
 
 ### SFVR_GazeConvergenceData
 __float__ accuracy <br>
 __float__ distance <br>
-__Fove.EFVR_ErrorCode__ error <br>
+[__Fove.EFVR_ErrorCode__](Fove.md/#efvr_errorcode) error <br>
 __ulong__ id <br>
-__Fove.SFVR_Ray__ ray <br>
+[__Fove.SFVR_Ray__](Fove.md/#sfvr_ray) ray <br>
 __ulong__ timestamp
 
 ### SFVR_GazeVector
 __ulong__ id <br>
-__Fove.EFVR_ErrorCode__ error <br>
+[__Fove.EFVR_ErrorCode__](Fove.md/#efvr_errorcode) error <br>
 __ulong__ timestamp <br>
-__Fove.SFVR_Vec3__ vector
+[__Fove.SFVR_Vec3__](Fove.md/#sfvr_vec3) vector
 
 ### SFVR_HeadOrientation
-__Fove.EFVR_ErrorCode__ error <br>
+[__Fove.EFVR_ErrorCode__](Fove.md/#efvr_errorcode) error <br>
 __ulong__ id <br>
-__Fove.SFVR_Quarternion__ quat <br>
+[__Fove.SFVR_Quarternion__](Fove.md/#sfvr_quarternion) quat <br>
 __ulong__ timestamp
 
 ### SFVR_Pose
-__Fove.SFVR_Vec3__ acceleration <br>
-__Fove.SFVR_Vec3__ angularAcceleration <br>
-__Fove.SFVR_Vec3__ angularVelocity <br>
-__Fove.EFVR_ErrorCode__ error <br>
+[__Fove.SFVR_Vec3__](Fove.md/#sfvr_vec3) acceleration <br>
+[__Fove.SFVR_Vec3__](Fove.md/#sfvr_vec3) angularAcceleration <br>
+[__Fove.SFVR_Vec3__](Fove.md/#sfvr_vec3) angularVelocity <br>
+[__Fove.EFVR_ErrorCode__](Fove.md/#efvr_errorcode) error <br>
 __ulong__ id <br>
-__Fove.SFVR_Quarternion__ orientation <br>
-__Fove.SFVR_Vec3__ position <br>
+[__Fove.SFVR_Quarternion__](Fove.md/#sfvr_quarternion) orientation <br>
+[__Fove.SFVR_Vec3__](Fove.md/#sfvr_vec3) position <br>
 __ulong__ timestamp <br>
-__Fove.SFVR_Vec3__ velocity
+[__Fove.SFVR_Vec3__](Fove.md/#sfvr_vec3) velocity
 
 ### SFVR_Quarternion
 __float__ w <br>
@@ -111,8 +111,8 @@ __float__ y <br>
 __float__ z
 
 ### SFVR_Ray
-__Fove.SFVR_Vec3__ direction <br>
-__Fove.SFVR_Vec3__ origin
+[__Fove.SFVR_Vec3__](Fove.md/#sfvr_vec3) direction <br>
+[__Fove.SFVR_Vec3__](Fove.md/#sfvr_vec3) origin
 
 ### SFVR_TextureBounds
 __float__ bottom <br>
