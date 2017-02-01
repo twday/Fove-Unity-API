@@ -1,39 +1,39 @@
-## FoveInterface
+# FoveInterface
 
-#### Variables:
+## Variables:
+### _FoveEyeCamera_ \_leftFoveEye
+Left Eye Camera
+### _FoveEyeCamera_ \_rightFoveEye
+Right Eye Camera
 
-`FoveEyeCamera _leftFoveEye`- Left Eye Camera
+## Structures
+### FoveInterface.EyeRays
+Structure that holds data about eye raycasts
+#### _Ray_ EyeRays.left
+Raycast from the Left eye
+#### _Ray_ EyeRays.right
+Raycast from the right eye
 
-`FoveEyeCamera _rightFoveEye` - Right Eye Camera
-
-`FoveInterface.EyeRays` - structure that holds data about eye raycasts
-`Ray EyeRays.left` - Left eye Raycast
-`Ray EyeRays.right` - Right eye Raycast
-
-Methods:
-
-`GazeEyeConvergence GetGazeConvergence();` - Get Gaze Convergence
-
-`FoveInterface.EyeRays GetEyeRays();` - Get Raycast for each eye
-
-`Fove.EFVR_Eye CheckEyesClosed();`- Check if eyes are closed
-
-`Vector3 GetHMDPosition`- Get Current Position of the HMD
-
-`Vector3 GetHMDRotation`- Get Current Rotation of the HMD
-
-`Fove.SFVR_Pose GetLastPose()`
-
-`Camera GetLeftEyeCamera()` - Get Camera for left eye
-
-`Vector3 GetLeftEyeVector()` - Get Vector for left eye
-
-`Vector3 GetNormalizedViewportPosition(Vector3 pos, EFVR_Eye eye)`
-
-`Camera getRightEyeCamera()` - get Camera for right eye
-
-`Vector3 GetRightEyeVector()` - get Vector for right eye
-
-`void TareOrientation()`
-
-`void TarePosition()`
+## Methods:
+### _GazeEyeConvergence_ GetGazeConvergence()
+Get Gaze Convergence
+### _FoveInterface.EyeRays_ GetEyeRays()
+Returns a structure that contains the current raycast from each eye
+### *Fove.EFVR\_Eye* CheckEyesClosed()
+Check whether either of the users eyes are closed
+### _Vector3_ GetHMDPosition
+Returns the current position of the HMD
+### _Vector3_ GetHMDRotation
+Returns the current rotation of the HMD
+### *Fove.SFVR_Pose* GetLastPose()
+### _Camera_ GetLeftEyeCamera()
+Returns the camera for the left eye
+### _Vector3_ GetLeftEyeVector()
+Returns the current vector of the left eye
+### _Vector3_ GetNormalizedViewportPosition(Vector3 pos, EFVR_Eye eye)
+### _Camera_ getRightEyeCamera()
+Returns the camera for the right eye
+### _Vector3_ GetRightEyeVector()
+Returns the current vector of the right eye
+### _void_ TareOrientation()
+### _void_ TarePosition()
