@@ -15,17 +15,17 @@ Raycast from the Left eye
 Raycast from the right eye
 
 ## Methods:
-### _GazeEyeConvergence_ GetGazeConvergence()
+### [_GazeEyeConvergence_](Fove.md/#sfvr_gazeconvergencedata) GetGazeConvergence()
 Get Gaze Convergence
-### _FoveInterface.EyeRays_ GetEyeRays()
+### [_FoveInterface.EyeRays_](FoveInterface.md/#foveinterface-eyerays) GetEyeRays()
 Returns a structure that contains the current raycast from each eye
-### *Fove.EFVR\_Eye* CheckEyesClosed()
+### [*Fove.EFVR\_Eye*](Fove.md/#efvr_eye)CheckEyesClosed()
 Check whether either of the users eyes are closed
 ### _Vector3_ GetHMDPosition
 Returns the current position of the HMD
 ### _Vector3_ GetHMDRotation
 Returns the current rotation of the HMD
-### *Fove.SFVR_Pose* GetLastPose()
+### [*Fove.SFVR_Pose*](Fove.md/#sfvr_pose)GetLastPose()
 ### _Camera_ GetLeftEyeCamera()
 Returns the camera for the left eye
 ### _Vector3_ GetLeftEyeVector()
