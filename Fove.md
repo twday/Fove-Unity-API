@@ -42,13 +42,13 @@
 |Data_UnreadableNotFound       | 1002 |Position_NoImage               | 5004 |
 |Data_NoUpdate                 | 1003 |Position_InvalidFile           | 5005 |
 |Data_Uncalibrated             | 1004 |Position_NoCamParaSet          | 5006 |
-|Hardware_CoreFault            | 2001 |Position_CantUpdateOptical     | 5007 |
-|Hardware_CameraFault          | 2002 |Position_ObjectNotTracked      | 5008 |
-|Hardware_Disconnected         | 2006 |Eye_Left_NoDLibRegressor       | 6000 |
-|Hardware_General              | 2000 |Eye_Right_NoDLibRegressor      | 6001 |
-|Hardware_IMUFault             | 2003 |Eye_CalibrationFailed          | 6002 |
-|Hardware_ScreenFault          | 2004 |Eye_LoadCalibrationFailed      | 6003 |
-|Hardware_SecurityFault        | 2005 |
+|Hardware_General              | 2000 |Position_CantUpdateOptical     | 5007 |
+|Hardware_CoreFault            | 2001 |Position_ObjectNotTracked      | 5008 |
+|Hardware_CameraFault          | 2002 |Eye_Left_NoDLibRegressor       | 6000 |
+|Hardware_IMUFault             | 2003 |Eye_Right_NoDLibRegressor      | 6001 |
+|Hardware_ScreenFault          | 2004 |Eye_CalibrationFailed          | 6002 |
+|Hardware_SecurityFault        | 2005 |Eye_LoadCalibrationFailed      | 6003 |
+|Hardware_Disconnected         | 2006 |
 |Hardware_WrongFirmwareVersion | 2007 |
 
 ### EFVR_Eye
