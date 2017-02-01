@@ -12,7 +12,7 @@ Download the setup executable (Current Version 0.10.0) and Unity-Plugin or Unity
 
 Run the executable and run the installer. Make sure you have the latest version of the [nVidia graphics drivers](http://www.geforce.com/drivers)
 
-Once the installation is complete
+Once the installation is complete, the runtime should be started automatically
 
 ## Calibration
 Calibration should run on first use.
