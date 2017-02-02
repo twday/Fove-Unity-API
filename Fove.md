@@ -1,6 +1,13 @@
 # Fove
 
 ## Types
+#### EFVR_AlphaMode
+| Type   | Value |
+|--------|:-----:|
+| Auto   |   0   |
+| One    |   1   |
+| Sample |   2   |
+
 ### EFVR_ClientCapabilities
 | Type                               | Value |
 |------------------------------------|:-----:|
@@ -124,7 +131,23 @@ __float__ right
 __float__ x <br>
 __float__ y
 
+### SFVR_Vec2i
+__No Information Available__
+
 ### SFVR_Vec3
 __float__ x <br>
 __float__ y <br>
 __float__ z
+
+### SFVR_Versions
+__int__ clientBuild <br>
+__int__ clientMajor <br>
+__int__ clientMinor <br>
+__int__ clientProtocol <br>
+__int__ firmware <br>
+__int__ maxFirmware <br>
+__int__ minFirmware <br>
+__int__ runtimeBuild <br>
+__int__ runtimeMajor <br>
+__int__ runtimeMinor <br>
+__int__ tooOldHeadsetConnected
