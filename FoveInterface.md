@@ -1,11 +1,5 @@
 # FoveInterface
 
-## Variables:
-### _FoveEyeCamera_ \_leftFoveEye
-Left Eye Camera
-### _FoveEyeCamera_ \_rightFoveEye
-Right Eye Camera
-
 ## Structures
 ### FoveInterface.EyeRays
 Structure that holds data about eye raycasts
@@ -13,18 +7,31 @@ Structure that holds data about eye raycasts
 Raycast from the Left eye
 #### _Ray_ EyeRays.right
 Raycast from the right eye
+### FoveInterace.Version
+#### _int_ Version.MAJOR
+The major version number
+#### _int_ Version.MINOR
+The minor version number
+#### _int_ Version.RELEASE
+The release version number
 
 ## Methods:
 ### [*Fove.EFVR\_Eye*](Fove.md/#efvr_eye) CheckEyesClosed()
 Check whether either of the users eyes are closed
 ### _bool_ CheckSoftwareVersions(out string error)
 Checks the current software version. If the software is up to date, the function will return true. Otherwise the function will return false and an error from the [EFVR_ErrorCode list](Fove.md/#efvr_errorcode)
+### _bool_ EnsureEyeTrackingCalibration()
+Ensures that eye tracking has been successfully calibrated
 ### _string_ GetClientVersion()
 Returns the current client version
 ### [_FoveInterface.EyeRays_](FoveInterface.md/#foveinterface-eyerays) GetEyeRays()
 Returns a structure that contains the current raycast from each eye
 ### _GazeEyeConvergence_ GetGazeConvergence()
 Get Gaze Convergence
+### Vector3 GetHMDPosition()
+Returns the current position of the headset
+### Quarternion GetHMDRotation()
+Returns the current rotation of the headset
 ### [*Fove.SFVR_Pose*](Fove.md/#sfvr_pose) GetLastPose()
 
 ### _Camera_ GetLeftEyeCamera()

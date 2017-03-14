@@ -15,6 +15,13 @@
 |EFVR_ClientCapabilities.Orientation |   2   |
 |EFVR_ClientCapabilities.Position    |   4   |
 
+### EFVR_ClientType
+| Type       | Value |
+|------------|:-----:|
+| Base       |       |
+| Diagnostic |       |
+| Overlay    |       |
+
 ### EFVR_ColorSpace
 | Type          | Value |
 |---------------|:-----:|
@@ -66,6 +73,13 @@
 | Right   |   2   |
 | Both    |   3   |
 
+### EFVR_GraphicsAPI
+| Type    | Value |
+|---------|:-----:|
+| DirectX |       |
+| OpenGL  |       |
+| Vulkan  |       |
+
 ## Classes
 ### FoveCompositor
 FoveCompositor.DisconnectedCompositor()
@@ -102,6 +116,7 @@ FoveCompositor.DisconnectedCompositor()
 [*EFVR_Eye*](Fove.md/#efvr_eye) CheckEyesClosed() <br>
 [*EFVR_Eye*](Fove.md/#efvr_eye) CheckEyesTracked() <br>
 [*EFVR_ErrorCode*](Fove.md/#evfr_errorcode) CheckSoftwareVersions() <br>
+[*EFVR_ErrorCode*](Fove.md/#efvr_errorcode) EnsureEyeTrackingCalibration() <br>
 [*SFVR_GazeConvergenceData*](Fove.md/#sfvr_gazeconvergencedata) GetGazeConvergence() <br>
 [*SFVR_GazeVector*](Fove.md/#sfvr_gazevector) GetGazeVector() <br>
 [*Fove.SFVR_Pose*](Fove.md/#sfvr_pose) GetHMDPose() <br>
@@ -112,13 +127,53 @@ FoveCompositor.DisconnectedCompositor()
   &emsp;&emsp;[*EFVR_Eye*](Fove.md/#evfr_eye) whichEye, <br>
   &emsp;&emsp;*float* zNear, <br>
   &emsp;&emsp;*float* zFar   <br>
-) <br>
+) {<br>
+  &emsp;&emsp;*Vector4* GetColumn(int i) <br>
+  &emsp;&emsp;*Vector4* GetRow(int i) <br>
+  &emsp;&emsp;*void* SetColumn(int i, Vector4 v) <br>
+  &emsp;&emsp;*void* SetRow(int i, Vector4 v) <br>
+  &emsp;&emsp;*void* SetTRS(Vector3 pos, Quarternion q, Vector3 s) <br>
+  &emsp;&emsp;*float* determinant <br>
+  &emsp;&emsp;*Matrix4x4* inverse <br>
+  &emsp;&emsp;*bool* isIdentity <br>
+  &emsp;&emsp;*float* m00, ... , m33 <br>
+  &emsp;&emsp;*Vector3* MultiplyPoint(*Vector3* v) <br>
+  &emsp;&emsp;*Vector3* MultiplyPoint3x4(*Vector3* v) <br>
+  &emsp;&emsp;*Vector3* MultiplyVector(*Vector3* v) <br>
+  &emsp;&emsp;*Matrix4x4* transpose <br>
+}<br>
 *Matrix4x4* GetProjectionMatrixRH( <br>
   &emsp;&emsp;[*EFVR_Eye*](Fove.md/#evfr_eye) whichEye, <br>
   &emsp;&emsp;*float* zNear, <br>
   &emsp;&emsp;*float* zFar   <br>
-) <br>
-[*SFVR_Versions*](Fove.md/#sfvr_versions) GetSoftwareVersions() <br>
+) {<br>
+  &emsp;&emsp;*Vector4* GetColumn(int i) <br>
+  &emsp;&emsp;*Vector4* GetRow(int i) <br>
+  &emsp;&emsp;*void* SetColumn(int i, Vector4 v) <br>
+  &emsp;&emsp;*void* SetRow(int i, Vector4 v) <br>
+  &emsp;&emsp;*void* SetTRS(Vector3 pos, Quarternion q, Vector3 s) <br>
+  &emsp;&emsp;*float* determinant <br>
+  &emsp;&emsp;*Matrix4x4* inverse <br>
+  &emsp;&emsp;*bool* isIdentity <br>
+  &emsp;&emsp;*float* m00, ... , m33 <br>
+  &emsp;&emsp;*Vector3* MultiplyPoint(*Vector3* v) <br>
+  &emsp;&emsp;*Vector3* MultiplyPoint3x4(*Vector3* v) <br>
+  &emsp;&emsp;*Vector3* MultiplyVector(*Vector3* v) <br>
+  &emsp;&emsp;*Matrix4x4* transpose <br>
+}<br>
+[*SFVR_Versions*](Fove.md/#sfvr_versions) GetSoftwareVersions(){ <br>
+ &emsp;&emsp;*int* clientBuild <br> 
+ &emsp;&emsp;*int* clientMajor <br>
+ &emsp;&emsp;*int* clientMinor <br>
+ &emsp;&emsp;*int* clientProtocol <br>
+ &emsp;&emsp;*int* firmware <br>
+ &emsp;&emsp;*int* maxFirmware <br>
+ &emsp;&emsp;*int* minFirmware <br>
+ &emsp;&emsp;*int* runtimeBuild <br>
+ &emsp;&emsp;*int* runtimeMajor <br>
+ &emsp;&emsp;*int* runtimeMinor <br>
+ &emsp;&emsp;*int* tooOldHeadsetConnected
+} <br>
 *bool* IsEyeTrackingCalibrated() <br>
 *bool* IsEyeTrackingCalibrating() <br>
 *bool* IsEyeTrackingEnabled() <br>
@@ -132,6 +187,14 @@ FoveCompositor.DisconnectedCompositor()
 *bool* TarePositionSensors()
 
 ## Structures
+### SFVR_ClientInfo
+[*Fove.EFVR_AlphaMode*](Fove.md/#efvr_alphamode) alphaMode <br>
+[*Fove.EFVR_GraphicsAPI*](Fove.md/#efvr_graphicsapi) api <br>
+*bool* disableDistortion <br>
+*bool* disableFading <br>
+*bool* disableTimeWarp <br>
+[*Fove.EFVR_ClientType*](Fove.md/#efvr_clienttype) type <br>
+
 ### SFVR_CompositorTexture
 [*Fove.EFVR_ColorSpace*](Fove.md/#efvr_colorspace) colorSpace <br>
 *System.intPtr* pTexture
@@ -155,6 +218,12 @@ FoveCompositor.DisconnectedCompositor()
 *ulong* id <br>
 [*Fove.SFVR_Quarternion*](Fove.md/#sfvr_quarternion) quat <br>
 *ulong* timestamp
+
+### SFVR_Matrix34
+*float[]* mat
+
+### SFVR_Matrix44
+*float[]* mat
 
 ### SFVR_Pose
 [*Fove.SFVR_Vec3*](Fove.md/#sfvr_vec3) acceleration <br>
@@ -187,7 +256,7 @@ FoveCompositor.DisconnectedCompositor()
 *float* x <br>
 *float* y
 
-### SFVR_Vec2i
+### SFVR_Vec2i
 *No Information Available*
 
 ### SFVR_Vec3
