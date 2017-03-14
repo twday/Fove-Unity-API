@@ -26,5 +26,8 @@ To run a VR experience in the FOVE using Unity,
 
 Create / Open a scene with the FOVE_Plugin installed and run using the play button.
 
+## Change Log
+*14/03/2017* - Updated API to Version 1.1.1
+
 ## Disclaimer
 I am not affiliated with FOVE, Inc. and neither is this repository. I am personally updating the documentation as I use the API.
